@@ -1,0 +1,37 @@
+#UserScreen {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#UserScreenBodyOuter {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 40px;
+}
+
+#UserScreenBody {
+    width: 100%;
+    max-width: 1300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+}
+
+#UserScreenLogoutButton {
+    margin-top: 30px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 8px 4px;
+    cursor: pointer;
+    text-align: center;
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

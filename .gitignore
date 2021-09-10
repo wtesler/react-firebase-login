@@ -1,0 +1,4 @@
+node_modules/*
+.idea/*
+dist/*
+src/test-env/src/Config/FIREBASE_CONFIG.json

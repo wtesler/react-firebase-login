@@ -1,0 +1,155 @@
+#FirebaseLoginScreenBodyOuter {
+  width: inherit;
+  height: inherit;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 50px;
+}
+
+#FirebaseLoginScreenBodyTitle {
+  width: 100%;
+  text-align: center;
+  font-size: 25px;
+  color: #3d4141;
+  align-self: center;
+  font-weight: 400;
+  letter-spacing: 1px;
+  padding: 10px 0;
+}
+
+#FirebaseLoginScreenBodySubtitle {
+  width: 350px;
+  max-width: 100%;
+  font-size: 18px;
+  color: #333333;
+  margin: 5px 0;
+  text-align: center;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+#FirebaseLoginScreenBodyContent {
+  width: 350px;
+  max-width: 100%;
+  padding: 20px;
+  margin: 10px 20px 20px 20px;
+  border-radius: 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.38)
+}
+
+.FirebaseLoginScreenBodyContentLogo {
+  margin-bottom: 40px;
+}
+
+.FirebaseLoginScreenBodyContentLogoImage {
+  width: 150px !important;
+}
+
+#FirebaseLoginScreenBodyOrOuter {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 40fr 15fr 40fr;
+  margin: 15px 0;
+}
+
+.FirebaseLoginScreenBodyOrDashOuter {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.FirebaseLoginScreenBodyOrDash {
+  width: 100%;
+  height: 1px;
+  /*background-color: #a0a0a0;*/
+}
+
+#FirebaseLoginScreenBodyOr {
+  color: #a0a0a0;
+  text-align: center;
+  font-style: italic;
+  font-weight: 400;
+}
+
+#FirebaseLoginScreenBodyOptions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.FirebaseLoginScreenBodyOption {
+  width: 100%;
+  border-radius: 2px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 24px 8px 24px;
+  margin: 5px;
+  cursor: pointer;
+  background-color: #2990bb;
+  color: #fff;
+  box-shadow: 0px 2px 4px 0px #A7B3BE, 0px -2px 4px 0px rgb(255, 255, 255);
+}
+
+@media (hover: hover) {
+  .FirebaseLoginScreenBodyOption:hover {
+    background-color: #3194bd;
+  }
+}
+
+.FirebaseLoginScreenBodyOptionContent {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 8fr;
+  position: relative;
+}
+
+.FirebaseLoginScreenBodyOptionImageOuter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.FirebaseLoginScreenBodyOptionImage {
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border-radius: 30px;
+  padding: 4px;
+}
+
+.FirebaseLoginScreenBodyOptionText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: -.3px;
+}
+
+#FirebaseLoginScreenBodyEmailSentOuter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#FirebaseLoginScreenBodyEmailSentIcon {
+  width: 50px;
+}
+
+#FirebaseLoginScreenBodyEmailSentMessage {
+  margin: 25px 0 15px 0;
+  text-align: center;
+  line-height: 30px;
+  font-size: 18px;
+}
