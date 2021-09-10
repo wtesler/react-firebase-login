@@ -2,7 +2,7 @@ import React from 'react';
 import './Root.css';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import FirebaseStartup from "./Firebase/FirebaseStartup";
-import LoginPortal from "../../../../lib/index";
+import {LoginPortal} from "../../../../lib/index";
 import UserScreen from "./User/UserScreen";
 /**
  * Top-Level Component for the App.

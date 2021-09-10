@@ -1,9 +1,9 @@
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import './LoginEmail.css';
 import {withModule} from "react-hoc-di";
-import {EMAIL_ADDRESS} from '../../../Constants/i18n';
+import {EMAIL_ADDRESS} from '../../../../Constants/i18n';
 import EmailUtils from './EmailUtils';
-import arrow_right_image from '../../../Images/arrow_right.svg';
+import arrow_right_image from '../../../../Images/arrow_right.svg';
 import {Icon} from "react-basic-icon";
 
 const LoginEmail = props => {
