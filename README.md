@@ -6,7 +6,7 @@ A basic login portal that can be used for a react firebase website.
 Ensure Firebase has been initialized before anything else is done.
 
 ```
-const LoginPortal = import('react-firebase-login');
+const {LoginPortal} = import('react-firebase-login');
 
 const withLogin = (component) => {
     return () => (
@@ -19,6 +19,13 @@ const withLogin = (component) => {
 // Route to it
 // ...
 <Route path={SOME_ROUTE} render={withLogin(<SomeScreen/>)}/>
+```
+
+You may also use only the `LoginContent` component and place it within
+your own login screen like:
+
+```
+const {LoginContent} = import('react-firebase-login');
 ```
 
 ### Firebase config for test environment:

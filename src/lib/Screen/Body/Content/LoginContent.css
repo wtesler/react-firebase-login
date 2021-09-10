@@ -10,12 +10,14 @@
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.38)
 }
 
-.FirebaseLoginContentContentLogo {
+#FirebaseLoginContentLogoOuter {
   margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
 }
 
-.FirebaseLoginContentContentLogoImage {
-  width: 150px !important;
+#FirebaseLoginContentLogoImage {
+  width: 150px;
 }
 
 #FirebaseLoginContentOrOuter {
@@ -119,4 +121,18 @@
   text-align: center;
   line-height: 30px;
   font-size: 18px;
+}
+
+#FirebaseLoginContentBottomOuter {
+  width: 100%;
+  margin-top: 15px;
+  font-size: 12.8px;
+  color: #b1b1b1;
+  font-weight: 500;
+}
+
+.FirebaseLoginContentBottomLegalLink {
+  color: #6f6f6f;
+  font-weight: 600;
+  text-decoration: none;
 }

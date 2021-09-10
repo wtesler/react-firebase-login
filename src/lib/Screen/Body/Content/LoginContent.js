@@ -2,13 +2,13 @@ import React, {useCallback, useMemo, useState} from 'react';
 import './LoginContent.css';
 import emailSuccessIcon from '../../../Images/email_success.svg';
 import googleIcon from '../../../Images/google.svg';
-import {EMAIL_SENT, SIGN_IN_GOOGLE} from '../../../Constants/i18n';
+import {EMAIL_SENT, LOGIN_LEGAL, PRIVACY_POLICY, SIGN_IN_GOOGLE, TERMS_OF_SERVICE} from '../../../Constants/i18n';
 import {Icon} from "react-basic-icon";
 import LoginEmail from './Email/LoginEmail';
 import {withModule} from "react-hoc-di";
 
 const LoginContent = props => {
-  const {module} = props;
+  const {module, logoSrc, termsOfServiceLink, privacyPolicyLink} = props;
   const {loginManager} = module;
 
   const [emailSent, setEmailSent] = useState(false);
@@ -20,6 +20,41 @@ const LoginContent = props => {
   const onGoogleLoginClicked = useCallback(() => {
     loginManager.loginWithGoogle();
   }, [loginManager]);
+
+  const bottomElement = useMemo(() => {
+    if (!termsOfServiceLink && !privacyPolicyLink) {
+      return null;
+    }
+    if ((termsOfServiceLink && !privacyPolicyLink) || (!termsOfServiceLink && privacyPolicyLink)) {
+      console.warn("You must supply both a termsOfServiceLink and privacyPolicyLink " +
+        "in order for the bottom element to show.");
+      return null;
+    }
+
+    const legalSplit = LOGIN_LEGAL.split("*");
+
+    const legalLinkClass = 'FirebaseLoginContentBottomLegalLink'
+
+    return (
+      <div id='FirebaseLoginContentBottomOuter'>
+        <>
+          <span>{legalSplit[0]}</span>
+          <span>
+            <a className={legalLinkClass} href={termsOfServiceLink}>
+              {TERMS_OF_SERVICE}
+            </a>
+          </span>
+          <span>{legalSplit[1]}</span>
+          <span>
+            <a className={legalLinkClass} href={privacyPolicyLink}>
+              {PRIVACY_POLICY}
+            </a>
+          </span>
+          <span>{legalSplit[2]}</span>
+        </>
+      </div>
+    )
+  }, [termsOfServiceLink, privacyPolicyLink]);
 
   const createOption = (onClick, text, image) => {
     return (<div
@@ -59,16 +94,17 @@ const LoginContent = props => {
             {createDash()}
           </div>
           {createOption(onGoogleLoginClicked, SIGN_IN_GOOGLE, googleIcon)}
+          {bottomElement}
         </div>
       </>
     )
-  }, [onGoogleLoginClicked, onEmailSubmit]);
+  }, [onGoogleLoginClicked, onEmailSubmit, bottomElement]);
 
   const emailSentContent = useMemo(() => {
     return (
       <div id={'FirebaseLoginContentEmailSentOuter'}>
         <div>
-          <Icon id={'FirebaseLoginContentEmailSentIcon'} src={emailSuccessIcon} />
+          <Icon id={'FirebaseLoginContentEmailSentIcon'} src={emailSuccessIcon}/>
         </div>
         <div id={'FirebaseLoginContentEmailSentMessage'}>{EMAIL_SENT}</div>
       </div>
@@ -79,8 +115,20 @@ const LoginContent = props => {
     return emailSent ? emailSentContent : formContent;
   }, [formContent, emailSentContent, emailSent]);
 
+  const logo = useMemo(() => {
+    if (!logoSrc) {
+      return null;
+    }
+    return (
+      <div id='FirebaseLoginContentLogoOuter'>
+        <Icon id='FirebaseLoginContentLogoImage' src={logoSrc}/>
+      </div>
+    );
+  }, [logoSrc]);
+
   return (
     <div id='FirebaseLoginContent'>
+      {logo}
       {content}
     </div>
   )

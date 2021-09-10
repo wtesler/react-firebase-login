@@ -6,9 +6,9 @@
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/wtesler/react-firebase-roles-editor.git"
+    "url": "https://github.com/wtesler/react-firebase-login.git"
   },
-  "homepage": "https://github.com/wtesler/react-firebase-roles-editor",
+  "homepage": "https://github.com/wtesler/react-firebase-login",
   "keywords": [
     "react",
     "firebase",
