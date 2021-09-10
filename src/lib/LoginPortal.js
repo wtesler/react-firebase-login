@@ -3,11 +3,11 @@ import LoginPortalInner from "./LoginPortalInner";
 import {RootOverlays} from "react-root-overlays";
 
 const LoginPortal = props => {
-  const {children} = props;
+  const {children, contentProps} = props;
 
   return (
     <RootOverlays>
-      <LoginPortalInner>
+      <LoginPortalInner contentProps={contentProps}>
         {children}
       </LoginPortalInner>
     </RootOverlays>

@@ -8,7 +8,7 @@ import LoginEmail from './Email/LoginEmail';
 import {withModule} from "react-hoc-di";
 
 const LoginContent = props => {
-  const {module, logoSrc, termsOfServiceLink, privacyPolicyLink} = props;
+  const {module, logoSrc, termsLink, privacyLink} = props;
   const {loginManager} = module;
 
   const [emailSent, setEmailSent] = useState(false);
@@ -22,12 +22,11 @@ const LoginContent = props => {
   }, [loginManager]);
 
   const bottomElement = useMemo(() => {
-    if (!termsOfServiceLink && !privacyPolicyLink) {
+    if (!termsLink && !privacyLink) {
       return null;
     }
-    if ((termsOfServiceLink && !privacyPolicyLink) || (!termsOfServiceLink && privacyPolicyLink)) {
-      console.warn("You must supply both a termsOfServiceLink and privacyPolicyLink " +
-        "in order for the bottom element to show.");
+    if ((termsLink && !privacyLink) || (!termsLink && privacyLink)) {
+      console.warn("You must supply both a termsLink and privacyLink in order for the bottom element to show.");
       return null;
     }
 
@@ -40,13 +39,13 @@ const LoginContent = props => {
         <>
           <span>{legalSplit[0]}</span>
           <span>
-            <a className={legalLinkClass} href={termsOfServiceLink}>
+            <a className={legalLinkClass} href={termsLink}>
               {TERMS_OF_SERVICE}
             </a>
           </span>
           <span>{legalSplit[1]}</span>
           <span>
-            <a className={legalLinkClass} href={privacyPolicyLink}>
+            <a className={legalLinkClass} href={privacyLink}>
               {PRIVACY_POLICY}
             </a>
           </span>
@@ -54,7 +53,7 @@ const LoginContent = props => {
         </>
       </div>
     )
-  }, [termsOfServiceLink, privacyPolicyLink]);
+  }, [termsLink, privacyLink]);
 
   const createOption = (onClick, text, image) => {
     return (<div

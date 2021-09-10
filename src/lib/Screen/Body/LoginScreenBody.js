@@ -2,11 +2,11 @@ import React from 'react';
 import './LoginScreenBody.css';
 import LoginContent from "./Content/LoginContent";
 
-const LoginScreenBody = () => {
-  const bogusLink = 'https://google.com';
+const LoginScreenBody = props => {
+  const {contentProps} = props;
   return (
     <div id='FirebaseLoginScreenBodyOuter'>
-      <LoginContent termsOfServiceLink={bogusLink} privacyPolicyLink={bogusLink}/>
+      <LoginContent {...contentProps}/>
     </div>
   )
 }

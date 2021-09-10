@@ -1,6 +1,6 @@
 {
   "name": "react-firebase-login",
-  "version": "1.0.3",
+  "version": "1.0.8",
   "description": "A basic login portal that can be used for a react firebase website.",
   "author": "Will Tesler",
   "license": "Apache-2.0",

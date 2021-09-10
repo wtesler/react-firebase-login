@@ -3,11 +3,12 @@ import './LoginScreen.css';
 import {withModule} from "react-hoc-di";
 import LoginScreenBody from "./Body/LoginScreenBody";
 
-const LoginScreen = () => {
+const LoginScreen = props => {
+  const {contentProps} = props;
   return (
     <div id="FirebaseLoginScreen">
       <div id='FirebaseLoginScreenBodyContainer'>
-        <LoginScreenBody/>
+        <LoginScreenBody contentProps={contentProps}/>
       </div>
     </div>
   );

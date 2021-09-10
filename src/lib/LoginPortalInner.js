@@ -4,7 +4,7 @@ import LoginScreen from './Screen/LoginScreen';
 import LoginModule from './Module/LoginModule';
 
 const LoginPortalInner = props => {
-  const {children, module} = props;
+  const {children, module, contentProps} = props;
   const {loginManager} = module;
 
   const [isLoggedIn, setIsLoggedIn] = useState(undefined);
@@ -25,8 +25,8 @@ const LoginPortalInner = props => {
       // Special condition to handle state before login manager has emit.
       return null;
     }
-    return isLoggedIn ? children : <LoginScreen/>;
-  }, [isLoggedIn, children]);
+    return isLoggedIn ? children : <LoginScreen contentProps={contentProps}/>;
+  }, [isLoggedIn, children, contentProps]);
 
   return (
     <>

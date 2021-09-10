@@ -9,8 +9,13 @@ import UserScreen from "./User/UserScreen";
  */
 const Root = () => {
   const withLogin = (component) => {
+    const bogusLink = 'https://google.com';
+    const contentProps = {
+      privacyLink: bogusLink,
+      termsLink: bogusLink,
+    }
     return () => (
-      <LoginPortal>
+      <LoginPortal contentProps={contentProps}>
         {component}
       </LoginPortal>
     )
