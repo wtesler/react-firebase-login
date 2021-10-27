@@ -15,9 +15,9 @@ const LoginEmail = props => {
 
   const emailInput = useRef();
 
-  useEffect(() => {
-    emailInput.current.focus();
-  }, []);
+  // useEffect(() => {
+  //   emailInput.current.focus();
+  // }, []);
 
   useEffect(() => {
     return () => {
