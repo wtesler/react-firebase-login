@@ -11,13 +11,18 @@
 }
 
 #FirebaseLoginContentLogoOuter {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   display: flex;
   justify-content: center;
 }
 
 #FirebaseLoginContentLogoImage {
   width: 150px;
+}
+
+#FirebaseLoginExplainer {
+  font-size: 13px;
+  line-height: 18px;
 }
 
 #FirebaseLoginContentOrOuter {
@@ -52,6 +57,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  margin-top: 20px;
 }
 
 .FirebaseLoginContentOption {
