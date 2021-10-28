@@ -8,7 +8,7 @@ import LoginEmail from './Email/LoginEmail';
 import {withModule} from "react-hoc-di";
 
 const LoginContent = props => {
-  const {module, logoSrc, explainer, termsLink, privacyLink} = props;
+  const {module, logoSrc, explainerTitle, explainer, termsLink, privacyLink} = props;
   const {loginManager} = module;
 
   const [emailSent, setEmailSent] = useState(false);
@@ -129,12 +129,23 @@ const LoginContent = props => {
     if (!explainer) {
       return null;
     }
+
+    let titleEle;
+    if (explainerTitle) {
+      titleEle = (
+        <div id='FirebaseLoginExplainerTitle'>
+          {explainerTitle}
+        </div>
+      )
+    }
+
     return (
       <div id='FirebaseLoginExplainer'>
+        {titleEle}
         {explainer}
       </div>
     )
-  }, [explainer])
+  }, [explainer, explainerTitle])
 
   return (
     <div id='FirebaseLoginContent'>

@@ -14,7 +14,7 @@
 #FirebaseLoginEmailForm {
   width: 100%;
   display: grid;
-  grid-template-columns: 86% 14%;
+  grid-template-columns: 88% 12%;
   justify-content: center;
   flex-direction: column;
 }
@@ -24,11 +24,10 @@
   line-height: 35px;
   font-size: 18px;
   outline: none;
-  border-top: none;
-  border-right: none;
-  border-bottom: 1px solid #cccccc;
-  border-left: none;
+  border: none;
   color: #555555;
+  background: #eeeeee;
+  padding: 0 10px;
 }
 
 #FirebaseLoginEmailSubmit {
@@ -42,7 +41,6 @@
   align-items: center;
   justify-content: center;
   font-weight: 700;
-  margin-left: 3px;
   box-shadow: 0px 1px 2px 0px #A7B3BE, 0px -1px 2px 0px rgb(255, 255, 255);
 }
 

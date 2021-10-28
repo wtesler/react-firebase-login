@@ -25,6 +25,12 @@
   line-height: 18px;
 }
 
+#FirebaseLoginExplainerTitle {
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
 #FirebaseLoginContentOrOuter {
   width: 100%;
   display: grid;
@@ -134,12 +140,12 @@
   margin-top: 15px;
   font-size: 12.8px;
   color: #b1b1b1;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 20px;
 }
 
 .FirebaseLoginContentBottomLegalLink {
   color: #6f6f6f;
-  font-weight: 600;
+  font-weight: 500;
   text-decoration: none;
 }
