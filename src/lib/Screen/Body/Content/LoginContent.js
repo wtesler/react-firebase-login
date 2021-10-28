@@ -71,6 +71,28 @@ const LoginContent = props => {
     </div>);
   }
 
+  const explainerElement = useMemo(() => {
+    if (!explainer) {
+      return null;
+    }
+
+    let titleEle;
+    if (explainerTitle) {
+      titleEle = (
+        <div id='FirebaseLoginExplainerTitle'>
+          {explainerTitle}
+        </div>
+      )
+    }
+
+    return (
+      <div id='FirebaseLoginExplainer'>
+        {titleEle}
+        {explainer}
+      </div>
+    )
+  }, [explainer, explainerTitle]);
+
   const formContent = useMemo(() => {
     const dashOuterClass = 'FirebaseLoginContentOrDashOuter';
     const dashClass = 'FirebaseLoginContentOrDash';
@@ -84,7 +106,8 @@ const LoginContent = props => {
     };
 
     return (
-      <>
+      <div>
+        {explainerElement}
         <div id='FirebaseLoginContentOptions'>
           <LoginEmail onEmailSubmit={onEmailSubmit}/>
           <div id='FirebaseLoginContentOrOuter'>
@@ -95,7 +118,7 @@ const LoginContent = props => {
           {createOption(onGoogleLoginClicked, SIGN_IN_GOOGLE, googleIcon)}
           {bottomElement}
         </div>
-      </>
+      </div>
     )
   }, [onGoogleLoginClicked, onEmailSubmit, bottomElement]);
 
@@ -125,32 +148,9 @@ const LoginContent = props => {
     );
   }, [logoSrc]);
 
-  const explainerElement = useMemo(() => {
-    if (!explainer) {
-      return null;
-    }
-
-    let titleEle;
-    if (explainerTitle) {
-      titleEle = (
-        <div id='FirebaseLoginExplainerTitle'>
-          {explainerTitle}
-        </div>
-      )
-    }
-
-    return (
-      <div id='FirebaseLoginExplainer'>
-        {titleEle}
-        {explainer}
-      </div>
-    )
-  }, [explainer, explainerTitle])
-
   return (
     <div id='FirebaseLoginContent'>
       {logo}
-      {explainerElement}
       {content}
     </div>
   )

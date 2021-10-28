@@ -13,7 +13,7 @@ const Root = () => {
     const contentProps = {
       logoSrc: 'https://storage.googleapis.com/mivie_public_resources/Logo/logo_primary_dark.svg',
       explainerTitle: 'Welcome to the Sample Portal',
-      explainer: 'If you do not already have an account with us, please create one below. Through creating an account, you will become a Sample Community Member, gaining access to additional resources, making connections with other community members, and the ability to easily apply for and complete the Sample Certification. If you have any questions, please email sample@gmail.com.',
+      explainer: 'Login or create an account below. Through creating an account, you will become a Sample Community Member, gaining access to additional resources, making connections with other community members, and the ability to easily apply for the Sample Certification.',
       privacyLink: bogusLink,
       termsLink: bogusLink,
     }
