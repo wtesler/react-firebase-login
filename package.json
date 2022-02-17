@@ -1,6 +1,6 @@
 {
   "name": "react-firebase-login",
-  "version": "1.1.7",
+  "version": "1.1.9",
   "description": "A basic login portal that can be used for a react firebase website.",
   "author": "Will Tesler",
   "license": "Apache-2.0",
@@ -49,13 +49,6 @@
   ],
   "babel": {
     "presets": [
-      [
-        "@babel/preset-env",
-        {
-          "useBuiltIns": "entry",
-          "corejs": 3
-        }
-      ],
       "@babel/preset-react"
     ],
     "plugins": []
