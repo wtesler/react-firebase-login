@@ -16,6 +16,7 @@
   ],
   "scripts": {
     "build": "npm run clean && babel src/lib --out-dir dist --copy-files",
+    "build_and_publish": "npm run build && npm publish",
     "clean": "rimraf dist",
     "test-env": "react-scripts start"
   },
